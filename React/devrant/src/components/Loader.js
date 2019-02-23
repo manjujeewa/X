@@ -1,17 +1,17 @@
 import React from 'react';
 
-class Loader extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+function Loader (props) {
 
-    render() {
+      if(!props.isLoading){
+        return null;
+      }
+
       return (
-        <div class="loader">
+        <div class="loader" >
           <div class="spinner"></div>
         </div>
       )
-    }
+    
   }
 
 export default Loader;
