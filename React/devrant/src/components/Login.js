@@ -6,6 +6,7 @@ class Login extends React.Component {
         
     }
 
+
     render() {
       return (
         <div class={"popup " + (this.props.isOpen? 'popup--open' : '')}>
@@ -27,7 +28,7 @@ class Login extends React.Component {
                         <form name="login">
                             <div class="login">
 
-                                <input type="text" placeholder="USERNAME" />
+                                <input type="text" placeholder="USERNAME" ref={input => input && input.focus()}/>
                                 <input type="password" placeholder="PASSWORD" />
 
                                 <div class="loader">
