@@ -2,6 +2,7 @@ import React from 'react';
 import Main from "../components/Main";
 import PostList from "../components/Postlist";
 import Post from  "../components/Post";
+import Login from "../components/Login"
 class RantList extends React.Component {
     constructor(props) {
         super(props);
@@ -16,6 +17,7 @@ class RantList extends React.Component {
                 <PostList>
                 <Post/><Post/>
                 </PostList>
+                <Login/>
             </Main>
         )
       }
