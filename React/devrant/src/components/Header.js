@@ -39,7 +39,7 @@ class Header extends React.Component {
                     <span onClick={this.handleClick}>Join</span>
                     <span>Sign Out</span>
                 </div>
-                <Login isOpen={this.state.isToggleOn ? true : false}/>
+                <Login isOpen={this.state.isToggleOn ? true : false} onclick={this.handleClick}/>
             </div>
         </section>
       )

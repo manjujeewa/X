@@ -2,14 +2,15 @@ import React from 'react';
 
 class Login extends React.Component {
     constructor(props) {
-        super(props);
+        super(props); 
+        
     }
 
     render() {
       return (
         <div class={"popup " + (this.props.isOpen? 'popup--open' : '')}>
             <div class="popup__header">
-                <div title="Close" class="close layout--center">
+                <div title="Close" class="close layout--center" onClick={this.props.onclick}>
                     X
                 </div>
             </div>
