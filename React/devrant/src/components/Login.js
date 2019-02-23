@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Loader from './Loader';
 class Login extends React.Component {
     constructor(props) {
         super(props); 
@@ -31,9 +31,7 @@ class Login extends React.Component {
                                 <input type="text" placeholder="USERNAME" ref={input => input && input.focus()}/>
                                 <input type="password" placeholder="PASSWORD" />
 
-                                <div class="loader">
-                                    <div class="spinner"></div>
-                                </div>
+                                <Loader isLoading={false}/>
 
                                 <div class="form__error">
                                     Some fields are missing !
