@@ -10,7 +10,7 @@ class Header extends React.Component {
                 </div>
 
                 {/* User Profile */}
-                <div class="profile layout--center">
+                <div class="profile layout--center hide">
                     <div class="profile__picture">
                         <svg height="36" width="36">
                             <circle cx="18" cy="18" r="18" fill="#5c5f6f"></circle>
