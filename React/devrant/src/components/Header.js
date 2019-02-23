@@ -1,6 +1,22 @@
 import React from 'react';
+import Login from './Login';
+
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: false};
+    
+        // This binding is necessary to make `this` work in the callback
+        this.handleClick = this.handleClick.bind(this);
+      }
+
+      handleClick() {
+        this.setState(state => ({
+          isToggleOn: !state.isToggleOn
+        }));
+      }
+
     render() {
       return (
         <section class="header layout--center">
@@ -20,9 +36,10 @@ class Header extends React.Component {
                 </div>
 
                 <div class="join">
-                    <span>Join</span>
+                    <span onClick={this.handleClick}>Join</span>
                     <span>Sign Out</span>
                 </div>
+                <Login isOpen={this.state.isToggleOn ? true : false}/>
             </div>
         </section>
       )
