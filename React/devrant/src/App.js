@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from "./components/Header";
-import Main from "./components/Main";
-import PostList from "./components/Postlist";
-import Post from  "./components/Post";
-
+import RantList from "./containers/RantList";
+import RantDetails from "./containers/RantDetails";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="page">
-        <Header/>
-        <Main isLoading={false}>
-          <PostList>
-            <Post/><Post/><Post/>
-          </PostList>
-        </Main>
-      </div>
+      <Router>
+        <div className="page">
+          <Header/>
+          <div>
+            <Route exact path="/" component={RantList} />
+            <Route exact path="/rant/:rant_id" component={RantDetails} />
+          </div>
+        </div>
+      </Router>
     );
   }
 }
