@@ -7,7 +7,7 @@ class Login extends React.Component {
 
     render() {
       return (
-        <div class="popup popup--open">
+        <div class={"popup " + (this.props.isOpen? 'popup--open' : '')}>
             <div class="popup__header">
                 <div title="Close" class="close layout--center">
                     X

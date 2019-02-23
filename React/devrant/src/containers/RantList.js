@@ -17,7 +17,7 @@ class RantList extends React.Component {
                 <PostList>
                 <Post/><Post/>
                 </PostList>
-                <Login/>
+                <Login isOpen={false}/>
             </Main>
         )
       }
